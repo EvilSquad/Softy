@@ -60,11 +60,11 @@ h2 {
     border-style: solid;
 }
 
-h3 {
+/* h3 {
     text-align: center;
     font-style: italic;
     font-size: 25px;
-}
+} */
 
 #last_added {
     color: #007BFF;
@@ -82,11 +82,11 @@ ol li {
     list-style-type: upper-roman;
 }
 
-dl dt {
+/* dl dt {
     font-weight: bold;
     font-size: 20px;
     color: #555;
-}
+} */
 
 dl dd {
     margin-left: 20px;
