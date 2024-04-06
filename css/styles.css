@@ -128,3 +128,26 @@ th {
     margin-left: auto;
     margin-right: auto;
 }
+
+p > b {
+    color: rgb(3, 163, 255); 
+    text-decoration: underline double rgb(1, 82, 129);
+ }
+
+ dl dt {
+    color: rgb(3, 247, 255); 
+    border: 5px solid rgb(0, 179, 255);
+    background-color: rgb(168, 168, 168);
+    padding-left: 10px;
+ }
+
+ h1 i {
+    color: rgb(0, 116, 120); 
+    text-decoration: wavy underline;
+ }
+
+ b + i {
+    color: rgb(0, 8, 255); 
+    text-decoration-line: underline;
+    text-shadow: 2px 2px rgb(161, 161, 161);
+ }
