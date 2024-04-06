@@ -1,50 +1,139 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'MusticaproSemibold';
     background-color: #e4e4e4;
     color: black;
     font-size: 16px;
-    line-height: 2.5;
+    line-height: 2;
     text-align: justify;
     margin-top: 0px;
-    margin-right: 200px;
-    margin-left: 200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 header {
-    color: #007BFF;
-    border-radius: 1px;
-    border-style: solid;
+    background-color: #d4d4d4;
+    border-bottom: #5b656f56 solid 1px;
+    height: 50px;
 }
 
-header a {
-    color: #007BFF;
-    text-decoration: none;
-    margin-right: 25px;
+.container_nav {
+    width: 1200px;
+    height: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: auto;
+    align-items: center;
+    display: flex;
 }
 
-header a:hover {
-    color: red;
+.accent {
+    color: #007BFF;
     text-decoration: underline;
 }
 
-a {
-    color: #007BFF !important;
+.container_nav a {
+    margin-left: 50px;
+    text-decoration: none;
+    color: #007BFF;
+}
+
+.container_nav a:first-child {
+    margin-left: 15px;
+    font-size: 20px;
+    color: #212529;
+}
+
+.container_nav a:last-child {
+    margin-right: 15px;
+    margin-left: auto;
+}
+
+.container_nav a:active {
+    color: #58687a;
+}
+
+header a:hover {
+    color: rgb(0, 53, 152);
+    text-decoration: underline;
+}
+
+table a:link {
+    text-decoration: none;
+    color: rgb(255, 0, 247);
+}
+
+table a:visited {
+    color: blue;
+}
+
+.container_main {
+    width: 1200px;
+    height: 100%;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .store_title {
     font-size: 50px;
+    margin: 0px;
+}
+
+.info {
+    color: purple;
+}
+
+.info:after {
+    color: rgb(190, 55, 55);
+    content: " NEW";
+}
+
+#last_added:before {
+    content: "EXCLUSIVE ";
+    text-decoration: none;
+}
+
+.offices {
+    border: black dotted 1px;
+    margin: 5px;
+    padding: 10px;
+    width: 50%;
+    color:#007BFF;
+}
+
+.offices:last-child {
+    position: relative;
+    top: 50px;
+    left: 50px;
+}
+
+.offices div {
+    border: black dotted 1px;
+    margin: 5px;
+    padding: 5px;
+    color:#212529;
+}
+
+.contacts {
+    display: flex;
+    align-items: center;
 }
 
 p {
     border-bottom: 1px solid #444444;
     color: #434343;
-}
-
-p.style_one {
-    font-style: italic;
-    color: #555;
     font-size: 20px;
     margin-top: 0px;
+    padding-top: 0px;
+    padding-bottom: 20px;
+}
+
+.user_info {
+    text-decoration: none;
+    font-size: 14px;
+    color:#7b7b7b;
+    border: 0px;
+    padding: 0px;
+    margin: 0px;
 }
 
 h1 {
@@ -55,20 +144,14 @@ h1 {
 h2 {
     color: black;
     text-align: center;
-    border-color: #212529;
-    border-radius: 1px;
-    border-style: solid;
+    border-bottom: #5b656f56 solid 1px;
+    border-top: #5b656f56 solid 1px;
+    background-color: #c8c8c8;
 }
 
-/* h3 {
-    text-align: center;
-    font-style: italic;
-    font-size: 25px;
-} */
 
 #last_added {
     color: #007BFF;
-    text-decoration: underline;
 }
 
 ul, ol {
@@ -82,12 +165,6 @@ ol li {
     list-style-type: upper-roman;
 }
 
-/* dl dt {
-    font-weight: bold;
-    font-size: 20px;
-    color: #555;
-} */
-
 dl dd {
     margin-left: 20px;
     background-color: #c0c0c0;
@@ -98,7 +175,6 @@ table {
     border-collapse: collapse;
     border-radius: 1px;
     border-style: solid;
-    font-family: fantasy;
 }
 
 th, td {
@@ -114,17 +190,24 @@ th {
 }
 
 .logo {
-    margin-top: 20px;
-    display: block;
-    width: 100px;
+    width: 200px;
     margin-left: auto;
     margin-right: auto;
+    float: left;
+    margin-right: 25px;
 }
 
 .page_image {
     margin-top: 20px;
     display: block;
-    width: 500px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.page_offices_countries {
+    margin-top: 20px;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -132,22 +215,29 @@ th {
 p > b {
     color: rgb(3, 163, 255); 
     text-decoration: underline double rgb(1, 82, 129);
- }
+}
 
- dl dt {
+dl dt {
     color: rgb(3, 247, 255); 
     border: 5px solid rgb(0, 179, 255);
     background-color: rgb(168, 168, 168);
     padding-left: 10px;
- }
+}
 
- h1 i {
+h1 i {
     color: rgb(0, 116, 120); 
     text-decoration: wavy underline;
- }
+}
 
- b + i {
-    color: rgb(0, 8, 255); 
-    text-decoration-line: underline;
-    text-shadow: 2px 2px rgb(161, 161, 161);
- }
+b + i {
+    color: rgb(2, 120, 150); 
+    text-shadow: 1px 1px rgb(161, 161, 161);
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: "MusticaproSemibold"; 
+    src: url("../fonts/MusticaproSemibold.otf") format("opentype"); 
+    font-style: normal; 
+    font-weight: normal; 
+  } 
