@@ -9,9 +9,23 @@
    <meta name = "author" content = "Bohdan Overianov">
    <link rel="stylesheet" type="text/css" href="./css/styles.css"/>
    <title>Softy</title>
+   <script src="./js/script2.js"></script>
 </head>
 
 <body>
+   SOFTY_TEST
+   <script>
+      alert("Welcome to Softy Store! Navigate the site using the menu.");
+      result = confirm("Are you sure you want to buy the product?");
+      if (result === true) {
+         alert("Happy shopping!");
+      } 
+      else {
+         alert("We hope you will come back to us later =)");
+      }
+      document.write("Have a nice day!")
+  </script>
+
    <header>
       <div class="container_nav">
          <a href="index.html">SOFTY</a>
@@ -24,9 +38,9 @@
    </header>
 
    <main>
+      <a onclick="storeTitle()">CHECK STORE TITLE</a>
       <div class="container_main">
-      
-         <h1 class="store_title">SOFTY</h1>
+         <h1 id= "store_title" class="store_title">SOFTY</h1>
 
          <p>Welcome to <span class="accent">Softy Software Shop</span> – your ultimate destination for the latest
          and greatest in software solutions! Nestled in the heart of the digital world,

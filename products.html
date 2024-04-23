@@ -8,6 +8,8 @@
    <meta name = "author" content = "Bohdan Overianov">
    <link rel="stylesheet" href="./css/styles.css"/>
    <title>Software - Softy</title>
+   <script src="./js/script.js"></script>
+   <script src="./js/script2.js"></script>
 </head>
 
 <body>
@@ -16,8 +18,9 @@
          <a href="index.html">SOFTY</a>
          <a href="products.html">Our products</a>
          <a href="reviews.html">Client reviews</a>
-         <a href="products.html#last_added">Last product</a>
-         <a class="info" href="https://en.wikipedia.org/wiki/Software_development">About software</a>
+         <a onclick="changeElementColor()" href="products.html#last_added">Last product</a>
+         <a class="info" onclick="otherWebsite()">About software</a>
+         <a class="info" onclick="dialog()">Games</a>
          <a href="contacts.html">Contacts</a>
       </div>
    </header>
@@ -25,7 +28,7 @@
    <main>
       <div class="container_main">
          <h1>Information about Software</h1>
-
+         <a onclick="changeBackgroundColor()">CHANGE BACKGROUND COLOR</a>
          <table>
             <tr> 
                <th><img src="images/discord.jpg" width="50" height="50"></th> 

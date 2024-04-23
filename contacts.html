@@ -8,6 +8,7 @@
    <meta name = "author" content = "Bohdan Overianov">
    <link rel="stylesheet" href="./css/styles.css"/>
    <title>Contacts - Softy</title>
+   <script src="./js/script2.js"></script>
 </head>
 
 <body>
@@ -23,10 +24,17 @@
    </header>
    
    <main>
+      <script>
+         let number = prompt("Write your phone number and we will contact you as soon as possible!", "+380974563215");
+         alert("We will call you back!");
+     </script>
+      
       <h1>Our contacts</h1>
       <h2>Our location and all contact information. You can contact us in<br>
       case of any difficulties and we will be happy to help you solve them.</h2>
       <div class="container_main">
+         <a onclick="showDeveloperInfo('Bohdan', 'Overianov')">Our developer</a>
+         <a onclick="officesEmails()">Show all offices emails</a>
          <div class="contacts">
             <div class="offices">Office in New Zealand:
                <div>New Zealand</div>

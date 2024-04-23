@@ -100,12 +100,6 @@ table a:visited {
     color:#007BFF;
 }
 
-.offices:last-child {
-    position: relative;
-    top: 50px;
-    left: 50px;
-}
-
 .offices div {
     border: black dotted 1px;
     margin: 5px;
