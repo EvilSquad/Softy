@@ -85,5 +85,15 @@ function removeReviews() {
 
 }
 
+function updateFirstReviews() {
+    let updatedFirstReview = document.createElement('p');
+    updatedFirstReview.className = 'user_info';
+    updatedFirstReview.innerHTML = '08.10.2023 | <span class="accent">Mary Johnson</span> - Updated Review';
+    let updatedFirstReviewText = document.createElement('p');
+    updatedFirstReviewText.textContent = "Evernote has continued to be an indispensable part of my daily life.";
+    reviewList.children[1].replaceWith(updatedFirstReview, updatedFirstReviewText);
+
+}
+
 
 
