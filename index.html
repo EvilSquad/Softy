@@ -13,19 +13,6 @@
 </head>
 
 <body>
-   SOFTY_TEST
-   <script>
-      alert("Welcome to Softy Store! Navigate the site using the menu.");
-      result = confirm("Are you sure you want to buy the product?");
-      if (result === true) {
-         alert("Happy shopping!");
-      } 
-      else {
-         alert("We hope you will come back to us later =)");
-      }
-      document.write("Have a nice day!")
-  </script>
-
    <header>
       <div class="container_nav">
          <a href="index.html">SOFTY</a>
@@ -38,11 +25,17 @@
    </header>
 
    <main>
-      <a onclick="storeTitle()">CHECK STORE TITLE</a>
       <div class="container_main">
-         <h1 id= "store_title" class="store_title">SOFTY</h1>
+         <h1 id= "store_title" class="store_title" >SOFTY</h1>
 
-         <p>Welcome to <span class="accent">Softy Software Shop</span> – your ultimate destination for the latest
+         <button data-toggle-id="menu">Show/Hide menu</button>
+         <div id="menu">
+             <button data-action="showDeveloperInfo">Show Developer Info</button>
+             <button data-action="compareStrings">Compare Strings</button>
+             <button data-action="changeBackgroundFunction">Change Background Color</button>
+         </div>
+
+         <p>Welcome to <span class="accent" onclick="alert('Welcome! We are glad to see you!')">Softy Software Shop</span> – your ultimate destination for the latest
          and greatest in software solutions! Nestled in the heart of the digital world,
          Softy is a cutting-edge platform that offers an extensive collection
          of software products designed to meet the diverse needs
@@ -52,7 +45,7 @@
             <img class="logo" src="images/logo.png"> 
          </div>
 
-         <p>At <span class="accent">Softy Software Shop</span>, we pride ourselves on our user-friendly interface,
+         <p>At <span class="accent" onclick="storeTitle(this)">Softy Software Shop</span>, we pride ourselves on our user-friendly interface,
          making it easy for customers to navigate through our vast selection of software.
          Whether you're looking for productivity tools, graphic design software,
          antivirus protection, or game development engines, our shop
@@ -73,5 +66,10 @@
       </div>
    </main>
 </body>
-
+<script>
+   store_title.addEventListener('click', {
+   handleEvent(event) {
+   alert("Debug message! \nYou " + event.type + " on " + event.currentTarget);
+   }});
+</script>
 </html>
