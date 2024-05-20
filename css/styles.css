@@ -209,7 +209,6 @@ th {
 #servicesList {
     list-style-type: none;
     font-size: 20px;
-    background-color: #c8c8c8;
 }
 
 p > b {
@@ -236,8 +235,42 @@ b + i {
 }
 
 .click_color {
-    background-color: #baf3f7; /* Серый цвет фона */
+    background-color: #baf3f7;
     list-style-type: none;
+}
+
+.hovered {
+    position: relative;
+    top: 5px;
+    left: 5px;
+    background-color: white;
+    box-shadow: -9px -8px 28px -1px rgba(0,123,255,0.75);
+    -webkit-box-shadow: -9px -8px 28px -1px rgba(0,123,255,0.75);
+    -moz-box-shadow: -9px -8px 28px -1px rgba(0,123,255,0.75);
+    border: 1px solid rgba(0,123,255,0.75);
+    color: rgb(3, 163, 255); 
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+.hovered_services {
+    background-color: white;
+    box-shadow: -9px -8px 28px -1px rgba(0,123,255,0.75);
+    -webkit-box-shadow: -9px -8px 28px -1px rgba(0,123,255,0.75);
+    -moz-box-shadow: -9px -8px 28px -1px rgba(0,123,255,0.75);
+    border: 1px solid rgba(0,123,255,0.75);
+    color: rgb(3, 163, 255); 
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+.hovered_services_related {
+    position: relative;
+    background-color: white;
+    box-shadow: -9px -8px 28px -1px rgba(255, 0, 0, 0.75);
+    -webkit-box-shadow: -9px -8px 28px -1px rgba(255, 0, 0, 0.75);
+    -moz-box-shadow: -9px -8px 28px -1px rgba(255, 0, 0, 0.75);
+    border: 1px solid rgba(255, 0, 0, 0.75);
+    color: rgb(255, 3, 3); 
+    cursor: pointer; /* Change cursor to pointer */
 }
 
 @font-face {
@@ -245,4 +278,5 @@ b + i {
     src: url("../fonts/MusticaproSemibold.otf") format("opentype"); 
     font-style: normal; 
     font-weight: normal; 
-  } 
+} 
+

@@ -92,19 +92,6 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 document.addEventListener("DOMContentLoaded", function() {
-    const servicesList = document.getElementById('servicesList');
-    servicesList.addEventListener('click', function(event) {
-        if (event.target.tagName === 'LI') {
-            if (event.target.classList.contains('click_color')) {
-                event.target.classList.remove('click_color');
-            } else {
-                event.target.classList.add('click_color');
-            }
-        }
-    });
-});
-
-document.addEventListener("DOMContentLoaded", function() {
     const actionMenu = document.getElementById('menu');
 
     actionMenu.addEventListener('click', function(event) {
@@ -130,4 +117,81 @@ document.addEventListener("DOMContentLoaded", function() {
         let elem = document.getElementById(id);
         elem.hidden = !elem.hidden;
     });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    const officeElements = document.querySelectorAll('.offices');
+
+    officeElements.forEach(element => {
+        element.addEventListener('mouseover', function(event) {
+            const target = event.currentTarget;
+            target.classList.add('hovered');
+        });
+
+        element.addEventListener('mouseout', function(event) {
+            const target = event.currentTarget;
+            target.classList.remove('hovered');
+        });
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    const officeElements = document.querySelectorAll('#servicesList li');
+    const servicesList = document.querySelector('#servicesList');
+
+    officeElements.forEach(element => {
+        element.addEventListener('mouseover', function(event) {
+            const relatedElement = event.relatedTarget;
+
+            if (relatedElement && relatedElement.tagName === 'LI' && servicesList.contains(relatedElement)) {
+                relatedElement.classList.remove('hovered_services');
+                relatedElement.classList.add('hovered_services_related');
+                setTimeout(() => {
+                    relatedElement.classList.remove('hovered_services_related');
+                }, 2000);
+            }
+
+            event.target.classList.add('hovered_services');
+        });
+
+        element.addEventListener('mouseout', function(event) {
+            event.target.classList.remove('hovered_services');
+        });
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    const logo = document.getElementById('logo');
+
+    logo.onmousedown = function(event) {
+        let shiftX = event.clientX - logo.getBoundingClientRect().left;
+        let shiftY = event.clientY - logo.getBoundingClientRect().top;
+
+        logo.style.position = 'absolute';
+        logo.style.zIndex = 1000;
+
+        document.body.append(logo);
+
+        moveAt(event.pageX, event.pageY);
+
+        function moveAt(pageX, pageY) {
+            logo.style.left = pageX - shiftX + 'px';
+            logo.style.top = pageY - shiftY + 'px';
+        }
+
+        function onMouseMove(event) {
+            moveAt(event.pageX, event.pageY);
+        }
+
+        document.addEventListener('mousemove', onMouseMove);
+
+        logo.onmouseup = function() {
+            document.removeEventListener('mousemove', onMouseMove);
+            logo.onmouseup = null;
+        };
+
+        logo.ondragstart = function() {
+            return false;
+        };
+    };
 });
